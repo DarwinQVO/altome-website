@@ -1,0 +1,266 @@
+/* History.css - Editorial Luxury Styling */
+
+.history-page {
+  width: 100%;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  overflow-x: hidden;
+}
+
+/* Base Reveal Animation Classes */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-reveal.revealed > * {
+  animation: staggerFadeIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stagger-reveal.revealed > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-reveal.revealed > *:nth-child(2) { animation-delay: 0.3s; }
+.stagger-reveal.revealed > *:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes staggerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* History Hero Section */
+.history-hero {
+  height: 80vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 5%;
+  background-color: var(--color-bg-primary);
+}
+
+.history-hero-content {
+  max-width: 800px;
+}
+
+.history-eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  margin-bottom: 1.5rem;
+}
+
+.history-hero h1 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  color: var(--color-emerald-deep);
+}
+
+.history-hero p {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Editorial Blocks */
+.editorial-block {
+  padding: 8rem 5%;
+}
+
+.bg-light { background-color: var(--color-bg-primary); }
+.bg-dark { background-color: var(--color-emerald-deep); }
+.light-text { color: #FFFFFF; }
+.light-text h2 { color: var(--color-warm-floral) !important; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+.light-text p { color: #FFFFFF; font-weight: 400; font-size: 1.2rem; line-height: 1.9; }
+
+.editorial-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.editorial-container.reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.editorial-text h2 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-emerald-deep);
+  line-height: 1.2;
+}
+
+.editorial-text p {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-secondary);
+}
+
+/* Drop Cap Effect */
+.editorial-text p.drop-cap::first-letter {
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: var(--font-serif);
+  color: var(--color-gold);
+}
+
+/* Editorial Images */
+.editorial-image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background-color: #eee;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Placeholders waiting for real photography */
+.placeholder-convent {
+  /* Give it a classy fallback texture until photo is provided */
+  background: linear-gradient(135deg, #d4b79b 0%, #bd8d54 100%);
+}
+
+.placeholder-galleon {
+  background: linear-gradient(135deg, #4b5d67 0%, #29343a 100%);
+}
+
+.caption {
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+.bg-dark .caption {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Legacy Block */
+.legacy-block {
+  text-align: center;
+  padding: 10rem 5%;
+}
+
+.legacy-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legacy-content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--color-emerald-deep);
+  margin-bottom: 1.5rem;
+}
+
+.legacy-content p {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.divider-line {
+  width: 1px;
+  height: 60px;
+  background-color: var(--color-emerald-deep);
+  margin: 3rem auto;
+}
+
+.philosophy-text {
+  font-family: var(--font-sans) !important;
+  font-size: 1.1rem !important;
+  font-style: normal !important;
+  line-height: 1.8 !important;
+  color: var(--color-text-secondary) !important;
+  text-align: justify;
+  text-align-last: center;
+}
+
+/* Responsive Refinement */
+@media (max-width: 992px) {
+  .history-hero {
+    height: 60vh;
+    padding: 2rem 5%;
+  }
+
+  .editorial-block {
+    padding: 4rem 5%;
+  }
+
+  .editorial-container, .editorial-container.reverse {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .editorial-container.reverse .editorial-text {
+    order: 1;
+  }
+  .editorial-container.reverse .editorial-image {
+    order: 2;
+  }
+  
+  .editorial-image {
+    aspect-ratio: 16/9;
+  }
+
+  .editorial-text h2 {
+    font-size: 2rem;
+  }
+
+  .legacy-block {
+    padding: 5rem 5%;
+  }
+}
+
+@media (max-width: 600px) {
+  .history-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .editorial-text p.drop-cap::first-letter {
+    font-size: 3.5rem;
+  }
+
+  .editorial-text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .philosophy-text {
+    text-align: left;
+  }
+}

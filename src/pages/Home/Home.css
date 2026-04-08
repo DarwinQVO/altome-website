@@ -1,0 +1,21 @@
+/* Home Styles */
+.home-page {
+  width: 100%;
+}
+
+.mini-shop {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.mini-shop h2 {
+  font-family: var(--font-serif);
+  color: var(--color-emerald-deep);
+  margin-bottom: 1rem;
+}
+
+.mini-shop p {
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}

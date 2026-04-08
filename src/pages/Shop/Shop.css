@@ -1,0 +1,246 @@
+/* Shop Styles */
+.shop-page {
+  padding: 100px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.shop-header h1 {
+  font-family: var(--font-serif);
+  color: var(--color-emerald-deep);
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.shop-header p {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.shop-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.shop-tab {
+  padding: 0.8rem 1.5rem;
+  background: white;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.shop-tab:hover, .shop-tab.active {
+  background: var(--color-emerald-deep);
+  color: white;
+  border-color: var(--color-emerald-deep);
+}
+
+.precurated-section h2 {
+  font-family: var(--font-serif);
+  color: var(--color-emerald-deep);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.mixes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.mix-card {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.mix-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.mix-card-image {
+  height: 200px;
+  background: var(--color-bg-secondary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mix-card-image::after {
+  content: 'CAJA DE 6';
+  color: #999;
+  font-family: var(--font-serif);
+  letter-spacing: 2px;
+}
+
+.size-12-img::after {
+  content: 'CAJA DE 12';
+}
+
+.mix-card-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.mix-card-info h3 {
+  font-family: var(--font-serif);
+  color: var(--color-emerald-deep);
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.mix-card-info p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.mix-price {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--color-emerald-deep);
+  margin-bottom: 0;
+}
+
+.mix-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mix-card-overlay span {
+  color: white;
+  font-family: var(--font-sans);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  border: 1px solid white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 40px;
+}
+
+.mix-card:hover .mix-card-overlay {
+  opacity: 1;
+}
+
+/* LUXURY MIX MODAL STYLES */
+.mix-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.mix-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+}
+
+.mix-modal-content {
+  position: relative;
+  z-index: 1001;
+  background: white;
+  width: 90%;
+  max-width: 1100px;
+  height: 80vh;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  transform: translateY(20px);
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mix-modal-layout {
+  display: flex;
+  height: 100%;
+}
+
+.mix-modal-visual {
+  flex: 1.1;
+  background: var(--color-bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mix-modal-text {
+  flex: 0.9;
+  padding: 4rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mix-modal-text h2 {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.tasting-notes p, .mix-contents p {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.mix-purchase-area {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mix-big-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-emerald-deep);
+}
+
+.btn-large-buy {
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
