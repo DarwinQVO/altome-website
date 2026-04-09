@@ -59,8 +59,15 @@
 
 .mixes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
+}
+
+@media (max-width: 600px) {
+  .mixes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 .mix-card {
@@ -192,12 +199,29 @@
   height: 100%;
 }
 
+@media (max-width: 992px) {
+  .mix-modal-layout {
+    flex-direction: column;
+  }
+  .mix-modal-content {
+    height: 90vh;
+    width: 95%;
+  }
+}
+
 .mix-modal-visual {
   flex: 1.1;
   background: var(--color-bg-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .mix-modal-visual {
+    height: 300px;
+    flex: none;
+  }
 }
 
 .mix-modal-text {
@@ -207,6 +231,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .mix-modal-text {
+    padding: 2rem 1.5rem;
+  }
+  .mix-modal-text h2 {
+    font-size: 2.2rem;
+  }
 }
 
 .mix-modal-text h2 {

@@ -18,13 +18,13 @@
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
 
-  /* Spacing */
-  --spacing-xs: 4px;
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 32px;
-  --spacing-xl: 64px;
-  --spacing-xxl: 128px;
+  /* Spacing - Fluid */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: clamp(1.5rem, 4vw, 3rem);
+  --spacing-xl: clamp(2.5rem, 8vw, 6rem);
+  --spacing-xxl: clamp(4rem, 12vw, 10rem);
 }
 
 body {
@@ -35,7 +35,12 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent horizontal scroll on mobile */
 }
+
+h1 { font-size: clamp(2.2rem, 8vw, 4rem); line-height: 1.1; }
+h2 { font-size: clamp(1.8rem, 6vw, 3rem); line-height: 1.2; }
+h3 { font-size: clamp(1.4rem, 4vw, 2rem); line-height: 1.3; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
@@ -47,6 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
   line-height: 1.6;
   margin: 0;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
 }
 
 * {
