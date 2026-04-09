@@ -48,9 +48,9 @@ app.post('/api/create_preference', async (req, res) => {
           email: payer.email,
         },
         back_urls: {
-          success: 'https://altome.mx/success',
-          failure: 'https://altome.mx/failure',
-          pending: 'https://altome.mx/pending'
+          success: 'https://darwinqvo.github.io/altome-website/#/success',
+          failure: 'https://darwinqvo.github.io/altome-website/#/cart',
+          pending: 'https://darwinqvo.github.io/altome-website/#/pending'
         },
         auto_return: 'approved',
       }
