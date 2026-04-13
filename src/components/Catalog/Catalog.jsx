@@ -50,7 +50,9 @@ const Catalog = () => {
       infoEN: 'See details on packaging.',
       featured: true,
       image: import.meta.env.BASE_URL + 'products/mazapan.png',
-      color: '#d4b79b'
+      color: '#d4b79b',
+      allergensES: 'Contiene semillas de pepita. Puede contener trazas de cacahuate, nueces y lácteos.',
+      allergensEN: 'Contains pumpkin seeds. May contain traces of peanuts, tree nuts, and dairy.'
     },
     {
       id: 2,
@@ -62,7 +64,9 @@ const Catalog = () => {
       historyES: 'Fruto de la costa, la cocada es el balance perfecto entre la textura del fruto fresco y el azúcar cristalizada.',
       historyEN: 'A fruit of the coast, cocada is the perfect balance between fresh fruit texture and crystallized sugar.',
       image: import.meta.env.BASE_URL + 'products/cocada.png',
-      color: '#bd8d54'
+      color: '#bd8d54',
+      allergensES: 'Contiene coco (nuez de árbol) y lácteos. Puede contener trazas de cacahuate y semillas.',
+      allergensEN: 'Contains coconut (tree nut) and dairy. May contain traces of peanuts and seeds.'
     },
     {
       id: 3,
@@ -138,7 +142,9 @@ const Catalog = () => {
       descES: 'Dulce de coco tostado al sol. Una textura única que combina la fibra natural con el crujir del caramelo.',
       historyES: 'Miel y coco en una fusión que abraza la tradición local del Caribe.',
       image: import.meta.env.BASE_URL + 'products/palanqueta-coco.png',
-      color: '#f2ecd8'
+      color: '#f2ecd8',
+      allergensES: 'Contiene coco (nuez de árbol). Puede contener trazas de cacahuate, otras nueces y lácteos.',
+      allergensEN: 'Contains coconut (tree nut). May contain traces of peanuts, other tree nuts, and dairy.'
     },
     {
       id: 10,
@@ -148,7 +154,9 @@ const Catalog = () => {
       descES: 'El clásico rústico por excelencia. Cacahuates seleccionados y tostados, unidos por una melaza dorada.',
       historyES: 'El cacahuate, nativo de América, se encuentra con el piloncillo en una placa dorada atemporal.',
       image: import.meta.env.BASE_URL + 'products/palanqueta-cacahuate.png',
-      color: '#cf9e57'
+      color: '#cf9e57',
+      allergensES: 'Contiene cacahuate. Puede contener trazas de nueces de árbol, semillas y lácteos.',
+      allergensEN: 'Contains peanuts. May contain traces of tree nuts, seeds, and dairy.'
     }
   ];
 
@@ -220,6 +228,12 @@ const Catalog = () => {
                 
                 <div className="tech-specs">
                    <span>{t(selectedSku.infoES, selectedSku.infoEN)}</span>
+                   <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#888', lineHeight: '1.4' }}>
+                     <strong>{t('Alérgenos:', 'Allergens:')}</strong> {t(
+                       selectedSku.allergensES || 'Puede contener trazas de cacahuate, nueces de árbol, semillas y lácteos.',
+                       selectedSku.allergensEN || 'May contain traces of peanuts, tree nuts, seeds, and dairy.'
+                     )}
+                   </div>
                 </div>
               </div>
             </div>

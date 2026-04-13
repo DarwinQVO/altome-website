@@ -22,9 +22,9 @@
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
-  --spacing-lg: clamp(1.5rem, 4vw, 3rem);
-  --spacing-xl: clamp(2.5rem, 8vw, 6rem);
-  --spacing-xxl: clamp(4rem, 12vw, 10rem);
+  --spacing-lg: clamp(1.2rem, 4vw, 3rem);
+  --spacing-xl: clamp(2rem, 6vw, 6rem);
+  --spacing-xxl: clamp(3rem, 10vw, 10rem);
 }
 
 body {

@@ -63,4 +63,7 @@
     flex-direction: column;
     gap: var(--spacing-md);
   }
+  .footer-title {
+    font-size: 1.6rem;
+  }
 }

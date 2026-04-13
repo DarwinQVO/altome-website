@@ -88,6 +88,10 @@
     padding: var(--spacing-xl) var(--spacing-md);
   }
 
+  .info-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
   .info-title {
     font-size: 2rem;
   }

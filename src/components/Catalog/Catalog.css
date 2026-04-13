@@ -263,3 +263,27 @@
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 600px) {
+  .catalog-title {
+    font-size: 2rem;
+  }
+  
+  .sensory-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .story-modal-content {
+    width: 95%;
+  }
+  
+  .story-modal-text {
+    padding: 1.5rem;
+  }
+  
+  .story-modal-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -128,7 +128,13 @@
     width: 100%;
   }
 
+  .hero {
+    min-height: auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
 }

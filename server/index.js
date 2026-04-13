@@ -12,7 +12,7 @@ app.use(cors());
 // Mercado Pago Configuration
 // User should put their real Access Token in .env
 const client = new MercadoPagoConfig({ 
-  accessToken: process.env.MP_ACCESS_TOKEN || 'TEST-60586940733596-031518-7ce325785f80b18f02900b9533c64c20-205167664' 
+  accessToken: process.env.MP_ACCESS_TOKEN 
 });
 
 app.post('/api/create_preference', async (req, res) => {
